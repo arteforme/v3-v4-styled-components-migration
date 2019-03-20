@@ -5,22 +5,6 @@ import * as React from 'react';
 import logo from './logo.svg';
 import styled from 'styled-components';
 
-interface TestProps {
-  className?: string;
-}
-
-const Test = styled.div.attrs({
-  className: 'testasdfadsf'
-})`
-  border: solid 1px red;
-`;
-
-const TestWithProps = styled.div.attrs<TestProps>({})``;
-
-const StyledDiv = styled.div.attrs({})`
-  border: solid 1px black;
-`;
-
 const StyledDivV4 = styled.div`
   border: solid 1px purple;
 `;
