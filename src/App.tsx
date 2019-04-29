@@ -6,7 +6,7 @@ import { BrowserRouter } from 'react-router-dom';
 import Link from './Link';
 import LinkAsButton from './LinkAsButton';
 import LinkAsButtonDisabled from './LinkAsButtonDisabled';
-import LinkWithAttrs from './LinkWithAttrs';
+import LinkWithMergedAttributes from './LinkWithMergedAttrs';
 import RouterLink from './RouterLink';
 
 class App extends React.Component {
@@ -14,7 +14,9 @@ class App extends React.Component {
     return (
       <div className="App">
         <Link className="test-1">Link</Link>
-        <LinkWithAttrs className="test-2">Link with Attrs</LinkWithAttrs>
+        <LinkWithMergedAttributes className="test-2">
+          Link with Attrs
+        </LinkWithMergedAttributes>
         <LinkAsButton className="test-3">Button</LinkAsButton>
         {/* This does not compile.  Errors with:
             Property 'disabled' does not exist on type 'IntrinsicAttributes & Pick<Pick<Pick<DetailedHTMLProps<AnchorHTMLAttributes<HTMLAnchorElement>
