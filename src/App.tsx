@@ -13,14 +13,13 @@ class App extends React.Component {
         <Link className="test-1" data-test="test" href="#">
           Link
         </Link>
-        <LinkWithCustomProps className="test-2" prop1="10px" prop2={false}>
-          Link with Custom Props
-        </LinkWithCustomProps>
-        <LinkWithCustomProps className="test-2" prop2={false}>
-          Link with Custom Props
-        </LinkWithCustomProps>
-        <Link as="button">Link as Button with as prop in DOM</Link>
-        <LinkAsButton>Link as Button with as prop in attrs</LinkAsButton>
+        {/* This will not work.  Link doesn't know about any button props */}
+        {/* <Link as="button" disabled={false}>
+          Link as Button with as prop in DOM
+        </Link> */}
+        <LinkAsButton disabled={true}>
+          Link as Button with as prop in attrs
+        </LinkAsButton>
       </div>
     );
   }
